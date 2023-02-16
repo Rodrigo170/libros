@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Libros</h1>
+
+    <table class="table">
+        <thead>
+            <th>Titulo</th>
+            <th>Autor</th>
+            <th>Editorial</th>
+            <th>Año Publicación</th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let libro of libros">
+                <td>{{libro.titulo}}</td>
+                <td>{{libro.autor}}</td>
+                <td>{{libro.editorial}}</td>
+                <td>{{libro.anioPublicacion}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
