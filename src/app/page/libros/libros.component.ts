@@ -26,4 +26,29 @@ export class LibrosComponent implements OnInit {
     });
   }
 
+  //MÉTODO PARA INSERTAR UN NUEVO LIBRO
+  insertarLibro(){
+    this.libroService.insertarLibro(this.libro);
+    this.libro = new Libro();
+  }
+
+  //MÉTODO PARA SELECIONAR UN LIBRO Y QUE SE ASIGNE A LA PROP LIBRO
+  selectLibro(libroSeleccionado:Libro){
+    this.libro = libroSeleccionado;
+  }
+
+  //MÉTODO PARA ACTUALIZAR UN Libro
+  updateLibro(){
+    this.libroService.updateLibro(this.libro);
+    this.libro = new Libro();
+  }
+
+  //MÉTODO PARA ELIMINAR UN LIRBO
+  deleteLibro(id:string){
+    this.libroService.deleteLibro(id);
+    this.libro = new Libro();
+  }
+
+
+
 }

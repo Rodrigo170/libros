@@ -27,8 +27,8 @@ export class LibroService {
     return this.firestore.doc('libros/'+libro.id).update(libro);
   }
 
-  deleteLibro(libro:Libro){
-    return this.firestore.doc('libros/'+libro.id).delete();
+  deleteLibro(id:string){
+    return this.firestore.doc('libros/'+id).delete();
   }
 
 
